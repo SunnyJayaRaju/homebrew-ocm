@@ -29,4 +29,4 @@ brew untap SunnyJayaRaju/ocm
 The `Formula/ocm.rb` is automatically updated by CI in the main [oc-model-manager](https://github.com/SunnyJayaRaju/oc-model-manager) repo whenever a new release ships. This tap is not manually maintained — it always reflects the latest release.
 
 ## License
-MIT — see [oc-model-manager LICENSE](https://github.com/SunnyJayaRaju/oc-model-manager/blob/main/LICENSE
+MIT — see [oc-model-manager LICENSE](https://github.com/SunnyJayaRaju/oc-model-manager/blob/main/LICENSE)
