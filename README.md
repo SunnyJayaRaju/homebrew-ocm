@@ -1,5 +1,8 @@
 # homebrew-ocm
 
+[![Formula](https://img.shields.io/badge/formula-ocm-orange.svg?style=flat-square)](Formula/ocm.rb)
+[![Source](https://img.shields.io/badge/source-oc--model--manager-blue.svg?style=flat-square)](https://github.com/SunnyJayaRaju/oc-model-manager)
+
 Homebrew tap for [ocm](https://github.com/SunnyJayaRaju/oc-model-manager) — the OpenCode Model Manager.
 
 ## What is ocm?
@@ -26,4 +29,4 @@ brew untap SunnyJayaRaju/ocm
 The `Formula/ocm.rb` is automatically updated by CI in the main [oc-model-manager](https://github.com/SunnyJayaRaju/oc-model-manager) repo whenever a new release ships. This tap is not manually maintained — it always reflects the latest release.
 
 ## License
-MIT — see [oc-model-manager LICENSE](https://github.com/SunnyJayaRaju/oc-model-manager/blob/main/LICENSE)
+MIT — see [oc-model-manager LICENSE](https://github.com/SunnyJayaRaju/oc-model-manager/blob/main/LICENSE
