@@ -12,15 +12,15 @@ class Ocprobe < Formula
   depends_on "sqlite"
 
   def install
-    # Install to match binary's bootstrap expectations:
-    # - binary at bin/ocprobe
-    # - VERSION at prefix/VERSION
-    # - lib/ at prefix/lib/ocprobe/
-    # - config/ at prefix/config/
+    # Install to match binary's installed-mode bootstrap expectations:
+    # binary at bin/ocprobe -> prefix/bin/ocprobe
+    # lib/ -> prefix/lib/ocprobe/
+    # config/ -> prefix/share/ocprobe/
+    # VERSION -> prefix/share/ocprobe/VERSION
     (prefix/"bin").install "bin/ocprobe"
     (prefix/"lib/ocprobe").install Dir["lib/*"]
-    (prefix/"config").install Dir["config/*"]
-    (prefix/"VERSION").write version.to_s
+    (prefix/"share/ocprobe").install Dir["config/*"]
+    (prefix/"share/ocprobe/VERSION").write version.to_s
     # Install man page
     man1.install "docs/ocprobe.1.md" => "ocprobe.1"
   end
