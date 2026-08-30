@@ -12,8 +12,15 @@ class Ocprobe < Formula
   depends_on "sqlite"
 
   def install
-    libexec.install "bin", "lib", "config", "VERSION"
-    bin.install_symlink libexec/"bin/ocprobe" => "ocprobe"
+    # Install to match binary's bootstrap expectations:
+    # - binary at bin/ocprobe
+    # - VERSION at prefix/VERSION
+    # - lib/ at prefix/lib/ocprobe/
+    # - config/ at prefix/config/
+    (prefix/"bin").install "bin/ocprobe"
+    (prefix/"lib/ocprobe").install Dir["lib/*"]
+    (prefix/"config").install Dir["config/*"]
+    (prefix/"VERSION").write version.to_s
     # Install man page
     man1.install "docs/ocprobe.1.md" => "ocprobe.1"
   end
